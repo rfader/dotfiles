@@ -1,0 +1,64 @@
+[user]
+    useConfigOnly = true
+    name = Rasmus Faddersbøll
+    email = rasmus.faddersboell@gmail.com
+
+[push]
+    default = current
+
+[alias]
+    s = status -sb
+    chunkadd = add --patch # stage chunk by chunk
+    c = commit
+    p = push
+    co = checkout
+    l = log --graph --full-history --pretty=format:'%C(red)%h%Creset - %C(yellow)%s %C(green)(%an, %cr)%C(white)%d%C(reset)' --abbrev-commit --date=relative
+    w = instaweb --local --httpd=webrick
+    r = remote -v
+    contributors = shortlog --summary --numbered
+
+    # List remote brances
+    lrb = "!f() { \
+        remote="${1:-origin}"; \
+        git ls-remote --heads "$remote"; \
+    }; f"
+
+[pager]
+    diff = diff-so-fancy | less --tabs=4 -RFX
+    show = diff-so-fancy | less --tabs=4 -RFX
+
+[commit]
+    # https://help.github.com/articles/signing-commits-using-gpg/
+    gpgsign = true
+
+[diff]
+    compactionHeuristic = true
+
+[merge]
+    tool = opendiff
+
+    # Include summaries of merged commits in newly created merge commit messages
+    log = true
+
+[color]
+    ui = always
+
+[color "branch"]
+    current = green bold
+    local = green
+    remote = yellow
+
+[color "status"]
+    added = green
+    changed = yellow
+    untracked = red
+
+[color "diff"]
+    frag = magenta
+    meta = yellow
+    new = green
+    old = red
+
+[help]
+    autocorrect = 1
+

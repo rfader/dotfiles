@@ -1,0 +1,14 @@
+# tmux
+.tmux/resurrect
+
+# vim
+.vim/tmp/backup/*
+.vim/tmp/swap/*
+.vim/tmp/undo/*
+
+# npm
+node_modules
+
+# macos
+.DS_Store
+
