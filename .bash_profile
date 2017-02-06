@@ -85,19 +85,20 @@ fi;
 #
 
 alias ll="ls -GFhpl"
+alias lla="ll -a"
 alias ls="ls -Gp"
 alias ..="cd .."
 alias cd..="cd .."
-#alias --="cd -"
 alias fs="stat -f '%z bytes'"
 alias df="df -h"
-alias mv='mv -v'
-alias rm='rm -i -v'
-alias cp='cp -v'
+alias mv="mv -v"
+alias rm="rm -i -v"
+alias cp="cp -v"
 alias RELOADBASH=". ~/.bash_profile"
 alias tmux="TERM=xterm-256color tmux"
 alias g="git"
 alias v="vim"
+alias j="jobs"
 alias server="python -m SimpleHTTPServer"
 
 alias wanip="dig +short myip.opendns.com @resolver1.opendns.com"
@@ -105,6 +106,12 @@ alias wanip="dig +short myip.opendns.com @resolver1.opendns.com"
 # Tmux
 alias tat="tmux attach-session -t"
 alias tls="tmux ls"
+
+alias grep="grep --color=auto"
+
+alias week="date +%V"
+
+alias afk="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend" # lock mac
 
 # pbcopy on linux
 # alias pbcopy="xclip -selection clipboard"

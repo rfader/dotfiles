@@ -25,6 +25,9 @@ set visible-stats on
 # prevent word duplication
 set skip-completed-text on
 
+# Readline never rings the bell
+set bell-style none
+
 # use the eighth bit
 set input-meta on
 set output-meta on
