@@ -150,9 +150,11 @@ set runtimepath^=~/.vim/bundle/syntastic
 " let g:syntastic_python_flake8_args='--ignore=E501'
 " let g:syntastic_ignore_files = ['.java$']
 
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
+" let g:statline_syntastic = 0
+
+"set statusline+=%#warningmsg#
+"set statusline+=%{SyntasticStatuslineFlag()}
+"set statusline+=%*
 
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
@@ -160,8 +162,10 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_javascript_checkers = ['eslint']
 
+let s:eslint_path = system('PATH=$(npm bin):$PATH && which eslint')
+let g:syntastic_javascript_eslint_exec = substitute(s:eslint_path, '^\n*\s*\(.\{-}\)\n*\s*$', '\1', '')
 " let g:syntastic_javascript_eslint_exe = '[ -f $(npm bin)/eslint ] && $(npm bin)/eslint || eslint'
-let g:syntastic_javascript_eslint_exe = '$(npm bin)/eslin'
+" let g:syntastic_javascript_eslint_exe = '$(npm bin)/eslint'
 
 " let g:syntastic_debug = 33
 " " }}}
