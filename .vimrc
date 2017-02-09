@@ -169,6 +169,17 @@ let g:syntastic_javascript_eslint_exec = substitute(s:eslint_path, '^\n*\s*\(.\{
 
 " let g:syntastic_debug = 33
 " " }}}
+" Indent Guides {{{
+set runtimepath^=~/.vim/bundle/vim-indent-guides
+
+let g:indent_guides_auto_colors = 0
+let g:indent_guides_guide_size = 1
+let g:indent_guides_start_level = 2
+let g:indent_guides_enable_on_vim_startup = 1
+
+autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=darkgrey ctermbg=236
+autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=darkgrey ctermbg=237
+" }}}
 " MacVim {{{
 set guioptions-=r
 set guioptions-=L
