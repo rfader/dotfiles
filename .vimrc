@@ -180,6 +180,11 @@ let g:indent_guides_enable_on_vim_startup = 1
 autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=darkgrey ctermbg=236
 autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=darkgrey ctermbg=237
 " }}}
+" JavaScript {{{
+set runtimepath^=~/.vim/bundle/vim-javascript
+
+let g:javascript_plugin_flow = 1
+" }}}
 " MacVim {{{
 set guioptions-=r
 set guioptions-=L
