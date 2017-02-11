@@ -127,7 +127,7 @@ let g:ctrlp_working_path_mode = 0 " change the working directory during a Vim se
 let g:ctrlp_custom_ignore = '\vbuild/|dist/|venv/|target/|\.(o|swp|pyc|egg)$'
 let g:ctrlp_user_command = 'ag %s -l --nocolor --hidden -g ""' " make CtrlP faster by leveraging ag
 " }}}
-" Powerline {{{
+" Airline {{{
 set runtimepath^=~/.vim/bundle/vim-airline
 
 let g:airline#extensions#tabline#left_sep = ' '
@@ -179,6 +179,9 @@ let g:indent_guides_enable_on_vim_startup = 1
 
 autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=darkgrey ctermbg=236
 autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=darkgrey ctermbg=237
+" }}}
+" Editor Config {{{
+set runtimepath^=~/.vim/bundle/editorconfig-vim
 " }}}
 " JavaScript {{{
 set runtimepath^=~/.vim/bundle/vim-javascript
