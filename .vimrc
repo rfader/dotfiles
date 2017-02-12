@@ -188,6 +188,9 @@ set runtimepath^=~/.vim/bundle/vim-javascript
 
 let g:javascript_plugin_flow = 1
 " }}}
+" Gundo {{{
+set runtimepath ^=~/.vim/bundle/gundo.vim
+" }}}
 " MacVim {{{
 set guioptions-=r
 set guioptions-=L
