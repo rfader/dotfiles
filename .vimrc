@@ -191,6 +191,9 @@ let g:javascript_plugin_flow = 1
 " Gundo {{{
 set runtimepath ^=~/.vim/bundle/gundo.vim
 " }}}
+" Multiple Cursors {{{
+set runtimepath^=~/.vim/bundle/vim-multiple-cursors
+" }}}
 " Surround {{{
 set runtimepath^=~/.vim/bundle/vim-surround
 " }}}
