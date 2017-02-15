@@ -4,6 +4,9 @@
 # use vim as default editor
 export EDITOR="vim"
 
+# use xterm by default
+export TERM=xterm-256color
+
 # use less for man, wont clear after quit
 export MANPAGER="less -X"
 

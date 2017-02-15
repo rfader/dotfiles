@@ -20,16 +20,20 @@ set lcs=tab:▸\ ,trail:·,eol:¬,nbsp:_
 set list
 
 " Colors {{{
-syntax enable " enable syntax processing
-syntax on
-set t_Co=256 " let vim know we supprt 256 colors
+let g:solarized_termcolors=256
+let g:solarized_termtrans = 1
 
+syntax enable " enable syntax processing
+
+set t_Co=256 " let vim know we support 256 colors
+"set term=xterm-256color
 set background=dark
+
 "colorscheme jellybeans
 "colorscheme molokai
-colorscheme brogrammer
+"colorscheme brogrammer
 "colorscheme monokai
-"colorscheme solarized
+colorscheme solarized
 " }}}
 " Fonts {{{
 set guifont=Source\ Code\ Pro\ Light:h12
