@@ -19,6 +19,8 @@ brew cask install spotify
 brew cask install sublime-text
 brew cask install virtualbox
 brew cask install graphiql
+brew cask install mysqlworkbench
+brew cask install sequel-pro
 
 brew cask install google-chrome
 brew cask install chromium
