@@ -123,6 +123,7 @@ alias grep="grep --color=auto"
 alias week="date +%V"
 
 alias afk="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend" # lock mac
+alias starwars="telnet towel.blinkenlights.nl"
 
 # pbcopy on linux
 # alias pbcopy="xclip -selection clipboard"
