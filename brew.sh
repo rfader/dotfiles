@@ -22,6 +22,7 @@ brew install pinentry
 
 brew install aircrack-ng
 brew install reaver
+brew install wireshark --with-qt5
 
 brew install ack
 brew install android-platform-tools
