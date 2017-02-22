@@ -21,6 +21,7 @@ brew cask install virtualbox
 brew cask install graphiql
 brew cask install mysqlworkbench
 brew cask install sequel-pro
+brew cask install atom
 
 brew cask install google-chrome
 brew cask install chromium
