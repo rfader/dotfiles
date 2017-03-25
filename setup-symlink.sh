@@ -26,5 +26,7 @@ backupAndLink ".tmux.conf"
 backupAndLink ".vimrc"
 backupAndLink ".vim"
 
+ln -fsv ~/.dotfiles/.ssh.config ~/.ssh/config
+
 echo "Done!"
 
