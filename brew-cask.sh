@@ -12,6 +12,7 @@ brew cask install imageoptim
 
 brew cask install spectacle
 brew cask install 1password
+brew cask install enpass
 brew cask install dropbox
 brew cask install slack
 brew cask install sonos
