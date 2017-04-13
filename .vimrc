@@ -187,6 +187,9 @@ autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=darkgrey ctermbg=237
 " Editor Config {{{
 set runtimepath^=~/.vim/bundle/editorconfig-vim
 " }}}
+" YouCompleteMe {{{
+set runtimepath^=~/.vim/bundle/YouCompleteMe
+" }}}
 " JavaScript {{{
 set runtimepath^=~/.vim/bundle/vim-javascript
 
