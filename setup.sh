@@ -16,5 +16,8 @@ if [ "$os_name" == "Darwin" ]; then
   # sh .macos
 fi
 
+# Adds missing ssh control folder
+mkdir ~/.ssh/control
+
 # sh setup-symlink.sh
 
