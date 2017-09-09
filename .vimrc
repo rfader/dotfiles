@@ -2,6 +2,9 @@
 
 runtime! debian.vim
 
+" scriptencoding utf-8
+set encoding=utf-8 nobomb " use UTF-8 everywhere without BOM
+
 set nocompatible
 
 set title          " the title of the window will be set to the value of: filename [+=-] (path) - VI - VIM
@@ -16,8 +19,8 @@ set noerrorbells " Disable error bells
 set mouse=a " Enable mouse in all modes
 
 " Show “invisible” characters
-set lcs=tab:▸\ ,trail:·,eol:¬,nbsp:_
 set list
+set lcs=tab:\|\ ,trail:·,eol:¬,nbsp:_
 
 " Colors {{{
 let g:solarized_termcolors=256
@@ -38,7 +41,6 @@ colorscheme solarized
 " Fonts {{{
 set guifont=Source\ Code\ Pro\ Light:h12
 set antialias " smooth fonts
-set encoding=utf-8 nobomb " use UTF-8 everywhere without BOM
 " }}}
 " Misc {{{
 set ttyfast " faster redraw
@@ -148,8 +150,15 @@ set runtimepath^=~/.vim/bundle/nerdtree
 let NERDTreeChDirMode=2
 let NERDTreeIgnore = ['\.pyc$', 'build', 'venv', 'egg', 'egg-info/', 'dist', 'docs']
 " }}}
+" Ale {{{
+set runtimepath^=~/.vim/bundle/ale
+
+" override linters
+let g:ale_linters = {'javascript': ['xo']}
+" }}}
 " Syntastic {{{
-set runtimepath^=~/.vim/bundle/syntastic
+" set runtimepath^=~/.vim/bundle/syntastic
+set runtimepath^=~/.vim/bundle/vim-xo
 
 " let g:syntastic_python_flake8_args='--ignore=E501'
 " let g:syntastic_ignore_files = ['.java$']
@@ -164,25 +173,29 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
-let g:syntastic_javascript_checkers = ['eslint']
+" let g:syntastic_javascript_checkers = ['eslint', 'flow', 'xo']
+let g:syntastic_javascript_checkers = ['xo']
+let g:syntastic_aggregate_errors = 1
 
 let s:eslint_path = system('PATH=$(npm bin):$PATH && which eslint')
 let g:syntastic_javascript_eslint_exec = substitute(s:eslint_path, '^\n*\s*\(.\{-}\)\n*\s*$', '\1', '')
 " let g:syntastic_javascript_eslint_exe = '[ -f $(npm bin)/eslint ] && $(npm bin)/eslint || eslint'
 " let g:syntastic_javascript_eslint_exe = '$(npm bin)/eslint'
 
+let g:syntastic_javascript_flow_exe = 'flow'
+
 " let g:syntastic_debug = 33
 " " }}}
 " Indent Guides {{{
-set runtimepath^=~/.vim/bundle/vim-indent-guides
+" set runtimepath^=~/.vim/bundle/vim-indent-guides
 
-let g:indent_guides_auto_colors = 0
-let g:indent_guides_guide_size = 1
-let g:indent_guides_start_level = 2
-let g:indent_guides_enable_on_vim_startup = 1
+" let g:indent_guides_auto_colors = 0
+" let g:indent_guides_guide_size = 1
+" let g:indent_guides_start_level = 2
+" let g:indent_guides_enable_on_vim_startup = 1
 
-autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=darkgrey ctermbg=236
-autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=darkgrey ctermbg=237
+" autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=darkgrey ctermbg=236
+" autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=darkgrey ctermbg=237
 " }}}
 " Editor Config {{{
 set runtimepath^=~/.vim/bundle/editorconfig-vim

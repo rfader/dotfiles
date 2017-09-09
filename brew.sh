@@ -38,6 +38,7 @@ brew install imagemagick --with-webp
 brew install mobile-shell
 brew install mongodb
 brew install mysql
+brew install neofetch
 brew install node
 brew install postgresql
 brew install reattach-to-user-namespace # for tmux copy/paste
