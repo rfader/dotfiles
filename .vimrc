@@ -1,5 +1,51 @@
 " Rasmus Faddersbøll
 
+" Install vim-plug if we don't already have it
+if empty(glob('~/.vim/autoload/plug.vim'))
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
+
+call plug#begin('~/.vim/plugged')
+"
+" Colorschemes
+Plug 'mreishus/vim-astraios'
+Plug 'marciomazza/vim-brogrammer-theme'
+Plug 'morhetz/gruvbox'
+Plug 'sickill/vim-monokai'
+Plug 'captbaritone/molokai'
+Plug 'altercation/vim-colors-solarized'
+Plug 'ajh17/spacegray.vim'
+Plug 'chriskempson/tomorrow-theme', { 'rtp': 'vim' }
+
+Plug 'vim-airline/vim-airline'
+" Plug 'vim-airline/vim-airline-themes'
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'editorconfig/editorconfig-vim'
+Plug 'rking/ag.vim'
+Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
+
+" Syntax
+Plug 'tpope/vim-git', { 'for': 'git' }
+Plug 'plasticboy/vim-markdown', { 'for': 'markdown' }
+Plug 'pangloss/vim-javascript'
+Plug 'mxw/vim-jsx'
+
+" Plug 'scrooloose/syntastic'
+Plug 'w0rp/ale'
+Plug 'sindresorhus/vim-xo'
+
+Plug 'Valloric/YouCompleteMe', { 'do': './install.py --all' }
+
+Plug 'sjl/gundo.vim'
+Plug 'tpope/vim-surround'
+Plug 'AlexJF/rename.vim', { 'on': 'Rename' }
+Plug 'terryma/vim-multiple-cursors'
+" Plug 'nathanaelkane/vim-indent-guides'
+
+call plug#end()
+
 runtime! debian.vim
 
 " scriptencoding utf-8
@@ -23,7 +69,7 @@ set list
 set lcs=tab:\|\ ,trail:·,eol:¬,nbsp:_
 
 " Colors {{{
-let g:solarized_termcolors=256
+" let g:solarized_termcolors=256
 let g:solarized_termtrans = 1
 
 syntax enable " enable syntax processing
@@ -119,14 +165,10 @@ nnoremap <leader>w :NERDTree<CR>
 nnoremap <leader>u :GundoToggle<CR>
 " }}}
 " Search {{{
-set runtimepath^=~/.vim/bundle/ag.vim
-
 " open ag.vim
 nnoremap <leader>a :Ag
 " }}}
 " CtrlP {{{
-set runtimepath^=~/.vim/bundle/ctrlp.vim
-
 let g:ctrlp_match_window = 'bottom,order:ttb' " order matching files top to bottom with ttb
 let g:ctrlp_switch_buffer = 0 " always open files in new buffers
 let g:ctrlp_working_path_mode = 0 " change the working directory during a Vim session and make CtrlP respect that change
@@ -134,8 +176,6 @@ let g:ctrlp_custom_ignore = '\vbuild/|dist/|venv/|target/|\.(o|swp|pyc|egg)$'
 let g:ctrlp_user_command = 'ag %s -l --nocolor --hidden -g ""' " make CtrlP faster by leveraging ag
 " }}}
 " Airline {{{
-set runtimepath^=~/.vim/bundle/vim-airline
-
 let g:airline#extensions#tabline#left_sep = ' '
 let g:airline#extensions#tabline#left_alt_sep = '|'
 let g:airline_left_sep = ''
@@ -145,21 +185,14 @@ let g:airline_right_alt_sep = ''
 set laststatus=2
 " }}}
 " NERDTree {{{
-set runtimepath^=~/.vim/bundle/nerdtree
-
 let NERDTreeChDirMode=2
 let NERDTreeIgnore = ['\.pyc$', 'build', 'venv', 'egg', 'egg-info/', 'dist', 'docs']
 " }}}
 " Ale {{{
-set runtimepath^=~/.vim/bundle/ale
-
 " override linters
 let g:ale_linters = {'javascript': ['xo']}
 " }}}
 " Syntastic {{{
-" set runtimepath^=~/.vim/bundle/syntastic
-set runtimepath^=~/.vim/bundle/vim-xo
-
 " let g:syntastic_python_flake8_args='--ignore=E501'
 " let g:syntastic_ignore_files = ['.java$']
 
@@ -187,8 +220,6 @@ let g:syntastic_javascript_flow_exe = 'flow'
 " let g:syntastic_debug = 33
 " " }}}
 " Indent Guides {{{
-" set runtimepath^=~/.vim/bundle/vim-indent-guides
-
 " let g:indent_guides_auto_colors = 0
 " let g:indent_guides_guide_size = 1
 " let g:indent_guides_start_level = 2
@@ -197,25 +228,8 @@ let g:syntastic_javascript_flow_exe = 'flow'
 " autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=darkgrey ctermbg=236
 " autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=darkgrey ctermbg=237
 " }}}
-" Editor Config {{{
-set runtimepath^=~/.vim/bundle/editorconfig-vim
-" }}}
-" YouCompleteMe {{{
-set runtimepath^=~/.vim/bundle/YouCompleteMe
-" }}}
 " JavaScript {{{
-set runtimepath^=~/.vim/bundle/vim-javascript
-
 let g:javascript_plugin_flow = 1
-" }}}
-" Gundo {{{
-set runtimepath ^=~/.vim/bundle/gundo.vim
-" }}}
-" Multiple Cursors {{{
-set runtimepath^=~/.vim/bundle/vim-multiple-cursors
-" }}}
-" Surround {{{
-set runtimepath^=~/.vim/bundle/vim-surround
 " }}}
 " MacVim {{{
 set guioptions-=r
