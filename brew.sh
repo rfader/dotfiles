@@ -41,7 +41,7 @@ brew install mysql
 brew install neofetch
 brew install node
 brew install postgresql
-brew install reattach-to-user-namespace # for tmux copy/paste
+# brew install reattach-to-user-namespace # for tmux copy/paste
 brew install redis
 brew install spectacle
 brew install sqlite

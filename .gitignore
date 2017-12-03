@@ -2,6 +2,7 @@
 .tmux/resurrect
 
 # vim
+.vim/.netrwhist
 .vim/tmp/backup/*
 .vim/tmp/swap/*
 .vim/tmp/undo/*
