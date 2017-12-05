@@ -61,6 +61,7 @@ brew install wget
 brew install yarn
 brew install z
 brew install zsh
+brew install zsh-completions
 
 # Remove outdated
 brew cleanup
