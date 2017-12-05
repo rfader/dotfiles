@@ -3,9 +3,10 @@ mkdir -p ~/backup-computer/home
 cd ~/backup-computer
 
 # Brew and npm
-brew leaves > brew-list.txt
-brew cask list > cask-list.txt
-npm list -g --depth=0 > npm-g-list.txt
+brew leaves                > brew-list.txt
+brew cask list             > cask-list.txt
+npm list -g --depth=0      > npm-g-list.txt
+yarn global list --depth=0 > yarn-g-list.txt
 
 # WiFi
 cp /Library/Preferences/SystemConfiguration/com.apple.airport.preferences.plist ~/backup-computer

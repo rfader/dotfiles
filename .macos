@@ -77,6 +77,7 @@ defaults write NSGlobalDomain NSAutomaticDashSubstitutionEnabled -bool false
 ###############################################################################
 
 # Disable local Time Machine snapshots
+sudo tmutil disable
 sudo tmutil disablelocal
 
 # Disable hibernation (speeds up entering sleep mode)
@@ -309,7 +310,7 @@ defaults write com.apple.dock mru-spaces -bool false
 #defaults write com.apple.dock showhidden -bool false
 
 # Add a spacer to the left side of the Dock (where the applications are)
-#defaults write com.apple.dock persistent-apps -array-add '{tile-data={}; tile-type="spacer-tile";}'
+defaults write com.apple.dock persistent-apps -array-add '{tile-data={}; tile-type="spacer-tile";}'
 
 
 ###############################################################################
@@ -451,7 +452,7 @@ defaults write org.x.X11 wm_ffm -bool false
 defaults write com.apple.TimeMachine DoNotOfferNewDisksForBackup -bool true
 
 # Disable local Time Machine backups
-hash tmutil &> /dev/null && sudo tmutil disablelocal
+# hash tmutil &> /dev/null && sudo tmutil disablelocal
 
 
 ###############################################################################

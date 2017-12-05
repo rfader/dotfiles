@@ -1,6 +1,6 @@
 #!/bin/bash
 
-npm install -g diff-so-fancy
+# npm install -g diff-so-fancy
 
 os_name="$(uname -s)"
 
@@ -17,7 +17,7 @@ if [ "$os_name" == "Darwin" ]; then
 fi
 
 # Adds missing ssh control folder
-mkdir ~/.ssh/control
+mkdir -p ~/.ssh/control
 
 # sh setup-symlink.sh
 
