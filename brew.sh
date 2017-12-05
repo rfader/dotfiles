@@ -42,6 +42,7 @@ brew install lftp
 brew install mongodb
 brew install mosh
 brew install mysql
+brew install ncdu
 brew install neofetch
 brew install node
 brew install postgresql
