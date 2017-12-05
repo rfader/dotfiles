@@ -43,6 +43,7 @@ brew install node
 brew install postgresql
 # brew install reattach-to-user-namespace # for tmux copy/paste
 brew install redis
+brew install rename
 brew install spectacle
 brew install sqlite
 brew install the_silver_searcher
