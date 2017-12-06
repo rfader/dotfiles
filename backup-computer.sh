@@ -1,5 +1,8 @@
 # Make backup dir
-mkdir -p ~/backup-computer/home
+mkdir -p ~/backup-computer/home/
+mkdir -p ~/backup-computer/Library/Application\ Support/
+mkdir -p ~/backup-computer/root/Library/Preferences/SystemConfiguration
+
 cd ~/backup-computer
 
 # Brew and npm
@@ -9,27 +12,30 @@ npm list -g --depth=0      > npm-g-list.txt
 yarn global list --depth=0 > yarn-g-list.txt
 
 # WiFi
-cp /Library/Preferences/SystemConfiguration/com.apple.airport.preferences.plist ~/backup-computer
+cp -Rp /Library/Preferences/SystemConfiguration/com.apple.airport.preferences.plist ~/backup-computer/root/Library/Preferences/SystemConfiguration
 
 # Backup
-cp ~/.anyconnect ~/backup-computer/home
-cp ~/.code-push.config ~/backup-computer/home
-cp ~/.gitconfig ~/backup-computer/home
+cp -Rp ~/.anyconnect ~/backup-computer/home
+cp -Rp ~/.bash_history ~/backup-computer/home
+cp -Rp ~/.code-push.config ~/backup-computer/home
+cp -Rp ~/.gitconfig ~/backup-computer/home
+cp -Rp ~/.gradle/gradle.properties ~/backup-computer/home/.gradle
+cp -Rp ~/.zsh_history ~/backup-computer/home
 
-cp -R ~/.atom ~/backup-computer/home
-cp -R ~/.aws ~/backup-computer/home
-cp -R ~/.docker ~/backup-computer/home
-cp -R ~/.gnupg ~/backup-computer/home
-cp -R ~/.ssh ~/backup-computer/home 
+cp -Rp ~/.atom ~/backup-computer/home
+cp -Rp ~/.aws ~/backup-computer/home
+cp -Rp ~/.docker ~/backup-computer/home
+cp -Rp ~/.gnupg ~/backup-computer/home
+cp -Rp ~/.oh-my-zsh ~/backup-computer/home
+cp -Rp ~/.ssh ~/backup-computer/home
 
-cp -R ~/Desktop ~/backup-computer
-cp -R ~/Documents ~/backup-computer
-cp -R ~/Downloads ~/backup-computer
+cp -Rp ~/Library/Application\ Support/Sublime\ Text\ * ~/backup-computer/Library/Application\ Support
+cp -Rp ~/Library/Services ~/backup-computer/Library # Automator
+cp -Rp ~/Library/Fonts ~/backup-computer/Library
 
-cp -R ~/Library/Application\ Support/Sublime\ Text\ 3/Packages ~/backup-computer
-cp -R ~/Library/Services ~/backup-computer # Automator
-
-cp -R ~/Movies ~/backup-computer
-cp -R ~/Music ~/backup-computer
-cp -R ~/Pictures ~/backup-computer
-
+cp -Rp ~/Desktop ~/backup-computer
+cp -Rp ~/Documents ~/backup-computer
+cp -Rp ~/Downloads ~/backup-computer
+cp -Rp ~/Movies ~/backup-computer
+cp -Rp ~/Music ~/backup-computer
+cp -Rp ~/Pictures ~/backup-computer
