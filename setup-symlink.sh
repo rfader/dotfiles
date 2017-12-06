@@ -1,7 +1,7 @@
 # backup and symlink all dotfiles
 
 # Create backup dir it it does not exist
-mkdir -p .backupfiles
+mkdir -p ~/.backupfiles
 
 DATE=$(date +%Y%m%d-%H%M%S)
 
