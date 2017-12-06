@@ -24,6 +24,7 @@ brew cask install pgadmin4
 brew cask install psequel
 brew cask install react-native-debugger
 brew cask install plex-media-player
+brew cask install postman
 brew cask install sketch
 brew cask install skype
 brew cask install slack
