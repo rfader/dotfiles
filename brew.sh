@@ -62,6 +62,7 @@ brew install yarn
 brew install z
 brew install zsh
 brew install zsh-completions
+brew install zsh-syntax-highlighting
 
 # Remove outdated
 brew cleanup
