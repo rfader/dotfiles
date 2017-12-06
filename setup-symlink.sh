@@ -20,11 +20,13 @@ backupAndLink ".bash_profile"
 backupAndLink ".eslintrc.js"
 backupAndLink ".gitconfig"
 backupAndLink ".gitignore"
+backupAndLink ".hushlogin"
 backupAndLink ".inputrc"
 backupAndLink ".tmux"
 backupAndLink ".tmux.conf"
 backupAndLink ".vimrc"
 backupAndLink ".vim"
+backupAndLink ".zshrc"
 
 ln -fsv ~/.dotfiles/.ssh.config ~/.ssh/config
 
