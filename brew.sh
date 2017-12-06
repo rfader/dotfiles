@@ -26,7 +26,6 @@ brew install reaver
 brew install wireshark --with-qt5
 
 brew install ack
-brew install android-platform-tools
 brew install awscli
 brew install cocoapods
 brew install docker

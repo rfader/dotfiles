@@ -38,6 +38,7 @@ brew cask install firefox
 brew cask install torbrowser
 brew cask install opera
 
+brew cask install android-platform-tools
 brew cask install gpg-suite
 brew cask install handbrakecli
 brew cask install charles
