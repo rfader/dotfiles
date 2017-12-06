@@ -50,7 +50,7 @@ brew cask install docker
 brew cask install licecap
 # brew cask install transmission
 brew cask install the-unarchiver
-brew cask install crashplan
+# brew cask install crashplan
 
 brew cask install font-source-code-pro
 
