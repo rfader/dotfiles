@@ -52,7 +52,9 @@ ZSH_THEME=""
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git brew npm zsh-syntax-highlighting)
+plugins=(brew git npm yarn)
+
+fpath=(/usr/local/share/zsh-completions $fpath)
 
 . `brew --prefix` /etc/profile.d/z.sh
 
@@ -123,3 +125,5 @@ alias grep="grep --color=auto"
 alias week="date +%V"
 
 alias afk="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend" # lock mac
+
+source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
