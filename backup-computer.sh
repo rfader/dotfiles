@@ -33,6 +33,7 @@ cp -Rp ~/.ssh ~/backup-computer/home
 cp -Rp ~/.tmux/resurrect ~/backup-computer/home/.tmux/
 
 cp -Rp ~/Library/Application\ Support/Sublime\ Text\ * ~/backup-computer/Library/Application\ Support
+cp -Rp ~/Library/Keychains ~/backup-computer/Library
 cp -Rp ~/Library/Services ~/backup-computer/Library # Automator
 cp -Rp ~/Library/Fonts ~/backup-computer/Library
 
@@ -42,3 +43,10 @@ cp -Rp ~/Downloads ~/backup-computer
 cp -Rp ~/Movies ~/backup-computer
 cp -Rp ~/Music ~/backup-computer
 cp -Rp ~/Pictures ~/backup-computer
+
+echo "Manual export data from:"
+echo "- Xcode Account"
+echo "- Sequel Pro"
+echo "- Transmit"
+echo ""
+echo "If you transfer the data on a USB drive, remember to delete it again!"
